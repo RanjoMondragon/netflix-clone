@@ -33,3 +33,7 @@
 .row_posterLarge:hover {
     transform: scale(1.09);
 }
+
+h2 {
+    font-family: sans-serif;
+}

@@ -26,6 +26,8 @@ function Banner() {
     }
 
     return (
+        //sets the movie's backdrop as the background image
+        
         <header className='banner'
             style={{
                 backgroundSize: "cover",
@@ -35,17 +37,19 @@ function Banner() {
                 backgroundPosition: "center center",
             }}
         >
-
+        <div className='overlay'/>
+        {/* shows the title, buttons and description of featured movie */}
         <div className='banner_contents'>
             <h1 className='banner_title'>{movie?.title || movie?.name || movie?.original_name}</h1>
 
             <div className='banner_buttons'>
-                <button className='banner_button'>Play</button>
-                <button className='banner_button'>My List</button>
+                <button className='banner_button play'>Play</button>
+                <button className='banner_button info'>More Info</button>
             </div>
 
             <h1 className='banner_description'>{truncate(movie?.overview,150)}</h1>
         </div>
+        {/* aesthetic addition so that banner blends/transitions into the first row  */}
         <div className='banner--fadeBottom' />
         </header>
     )
